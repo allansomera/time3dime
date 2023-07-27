@@ -1,0 +1,24 @@
+session_name: time3dime 
+windows: 
+  - window_name: server
+    options:
+      automatic-rename: true
+    layout: main-vertical
+    panes:
+      - shell_command:
+        - npm run dev 
+      # - shell_command:
+      #   - cd .. && cd client && npm run dev 
+  - window_name: dev
+    options:
+      automatic-rename: true
+    focus: true
+    panes:
+      - shell_command:
+          - n 
+        focus: true
+  - window_name: git
+    options:
+      automatic-rename: true
+    panes:
+      - blank 
