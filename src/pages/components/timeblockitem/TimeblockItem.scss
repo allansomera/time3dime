@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    // justify-content: flex-start;
+    border-radius: 5px;
+    border: 2px solid black;
+    // margin-left: 20px;
+    width: 100px;
+    
+
+    &__leftbar {
+        width:8px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    &__itemCon {
+        text-align: left;
+        padding-top: 2px;
+        padding-left: 10px;
+        flex: 1;
+        // text-align: center;
+    }
+}
+
+
+
