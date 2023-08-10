@@ -1,15 +1,25 @@
 import { Schema, model, models } from 'mongoose'
 
+// const userSchema = new Schema({
+//   name: String,
+//   days: [
+//     {
+//       type: Schema.Types.ObjectId,
+//       ref: 'Day',
+//     },
+//   ],
+// })
+
 const userSchema = new Schema({
   name: String,
-  days: [
+  day_ids: [
     {
-      type: Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId(),
       ref: 'Day',
     },
   ],
 })
 
-const User = models.user || model('User', userSchema)
+const User = models.User || model('User', userSchema)
 
 export default User
