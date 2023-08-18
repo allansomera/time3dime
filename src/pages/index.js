@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { useState } from 'react'
 
+import T__ from './components/t__/T__'
 // import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,7 +15,7 @@ export default function Home() {
 
   const createUser = async () => {
     try {
-      const createdUser = await fetch('/api/usersV1/users', {
+      const createdUser = await fetch('/api/users', {
         method: 'POST',
         headers: {
           'content-Type': 'application/json',
@@ -24,21 +25,13 @@ export default function Home() {
           email,
         }),
       }).then((res) => {
-        setName('')
-        setEmail('')
+        res.json()
         console.log(res)
-        return res.status(200).json()
       })
       console.log('created document')
-      console.log(createUser)
-      setName((prev) => {
-        prev = ''
-        return prev
-      })
-      setEmail((prev) => {
-        prev = ''
-        return prev
-      })
+
+      setName('')
+      setEmail('')
     } catch (error) {
       console.log(error)
     }
@@ -47,9 +40,7 @@ export default function Home() {
   const displayUsers = async () => {
     try {
       console.log('fetching documents')
-      const fetchedUsers = await fetch('/api/usersV1/users').then((data) =>
-        data.json()
-      )
+      const fetchedUsers = await fetch('/api/users').then((data) => res.json())
       console.log('fetched documents')
       setUsersResults(fetchedUsers)
       console.log(usersResults)

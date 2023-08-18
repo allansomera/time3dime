@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es6",
     "target": "es6",
     "moduleResolution": "node",
     "allowJs": true,
@@ -12,10 +12,10 @@
     "skipLibCheck": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
       "@lib/*": ["./lib/*"]
     }
   },
-  "exclude": [""]
+  "exclude": ["node_modules"]
 }
