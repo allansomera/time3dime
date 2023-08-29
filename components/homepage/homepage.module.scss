@@ -1,0 +1,197 @@
+.homepage {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.column1, .column2, .column3, .column4 {
+    color: white;
+    background-color: #34985B;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    text-align: center;
+}
+
+.column5{
+    margin-left: 20px;
+}
+
+.timeslot{
+    display: flex;
+    margin-top: 32px;
+}
+.tagcolumn-title{
+    color: #fbc800;
+    padding: 0;
+    font-size: 125px;
+    order:2;
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+    // transform: scale(-1,-1);
+    font-weight: 600;
+    padding-top: 40px;
+}
+
+
+// body {
+//     background-color: #34985B;
+//     // background-color: #9cca8c;
+// }
+
+.testcolumn{
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 248px;
+}
+
+.tc_button{
+    margin-top: 16px;
+    margin-right: 24px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 8px 8px yellow;
+    // box-shadow: 8px 8px yellow, 8px 8px 0px 1px black;
+    width: 175px;
+    height: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #a66efe;
+        box-shadow: 8px 8px #fbf4a0;
+        transition-duration: 0.4s;
+        animation: pulse .75s;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(.85);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 30px rgba(#a66efe, 0);
+      }
+        100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(#a66efe, 0);
+      }
+    }
+
+}
+
+
+.tag {
+    &__column {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        box-shadow: #1c61c4 20px 20px;
+        border-radius: 5px;
+        width: 200px;
+    }
+    &__type{
+        // margin-top: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        box-shadow: 8px 8px yellow;
+        // box-shadow: 8px 8px yellow, 8px 8px 0px 1px black;
+        width: 100px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.project_name {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 200px;
+    height: 300px;
+    perspective: 200px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.capstone {
+    padding-left: 36px;
+    color: white;
+    font-size: 225px;
+    font-weight: 500;
+    line-height: 225px;
+    text-align: left;
+    transform-origin: left;
+    transform: rotateY(15deg);
+    transition-duration: .4s;
+    &:hover{
+        color: transparent;
+        cursor: pointer;
+        transform: rotateY(9deg) translateZ(0) scale(1.1);
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        &::first-letter{
+            color: transparent;
+        }
+    }
+    // &:hover::before{
+    //     content: "gh_";
+    // }
+    &::first-letter{
+        color: black;
+    }
+    
+
+}
+.chart{
+    position: absolute;
+    right: 140px;
+    bottom: 75px;
+    width: 350px;
+    height: 350px;
+    // background-color: red;
+}
+
+.capstone2{
+    padding-left: 36px;
+    color: transparent;
+    font-size: 225px;
+    font-weight: 500;
+    line-height: 225px;
+    text-align: left;
+    transform-origin: left;
+    transform: rotateY(15deg);
+    transition-duration: .4s;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+
+    &:hover{
+        color: white;
+        cursor: pointer;
+        transform: rotateY(9deg) translateZ(0) scale(1.1);
+        &::first-letter{
+            color: black;
+        }
+    }
+    &::first-letter{
+        color: transparent;
+    }
+}
+
+@keyframes slideInFromTop {
+    0%{
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateY(-100%) scale(.5, 1.5);
+        opacity: 0.5;
+    }100%{
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
+}
